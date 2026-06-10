@@ -1,199 +1,56 @@
 ---
 weight: 3
-title: "Theme Documentation - Built-in Shortcodes"
-date: 2020-03-04T16:29:41+08:00
-lastmod: 2020-03-04T16:29:41+08:00
+title: "Comandos Basicos de Linux"
+date: 2026-06-10T16:29:41+08:00
+lastmod: 2026-06-10T16:29:41+08:00
 draft: false
-author: "Dillon"
-authorLink: "https://dillonzq.com"
-description: "Hugo provides multiple built-in shortcodes for author convenience and to keep your markdown content clean."
+author: "jrsue774-rgb"
+authorLink: ""
+description: "Aprende los comandos mas importantes de Linux para usar la terminal con confianza."
 images: []
 resources:
 - name: "featured-image"
   src: "featured-image.png"
-
-tags: ["shortcodes"]
-categories: ["documentation"]
-
+tags: ["linux", "comandos", "terminal"]
+categories: ["linux"]
 lightgallery: true
 ---
 
-**Hugo** provides multiple built-in shortcodes for author convenience and to keep your markdown content clean.
+Aprende los comandos mas importantes de Linux para usar la terminal con confianza desde el primer dia.
 
 <!--more-->
 
-Hugo uses Markdown for its simple content format. However, there are a lot of things that Markdown doesn’t support well. You could use pure HTML to expand possibilities.
+## 1 Navegacion
 
-But this happens to be a bad idea. Everyone uses Markdown because it’s pure and simple to read even non-rendered. You should avoid HTML to keep it as simple as possible.
+- pwd — muestra la carpeta actual
+- ls — lista los archivos
+- ls -la — lista con detalles y archivos ocultos
+- cd nombre — entra a una carpeta
+- cd .. — sube un nivel
+- cd ~ — va a la carpeta principal
 
-To avoid this limitations, Hugo created [shortcodes](https://gohugo.io/extras/shortcodes/).
-A shortcode is a simple snippet that can generate reasonable HTML code and conforms to Markdown's design philosophy.
+## 2 Archivos y Carpetas
 
-Hugo ships with a set of predefined shortcodes that represent very common usage. These shortcodes are provided for author convenience and to keep your markdown content clean.
+- mkdir nombre — crea una carpeta
+- touch archivo.txt — crea un archivo vacio
+- cp origen destino — copia un archivo
+- mv origen destino — mueve o renombra
+- rm archivo — elimina un archivo
+- rm -rf carpeta — elimina una carpeta completa
 
-## 1 figure {#figure}
+## 3 Ver Contenido
 
-[Documentation of `figure`](https://gohugo.io/shortcodes/figure/)
+- cat archivo — muestra el contenido completo
+- head archivo — muestra las primeras lineas
+- tail archivo — muestra las ultimas lineas
 
-Example `figure` input:
+## 4 Buscar
 
-```markdown
-{{</* figure
-    src="/images/zion-national-park.jpg"
-    alt="A photograph of Zion National Park"
-    link="https://www.nps.gov/zion/index.htm"
-    caption="Zion National Park"
-    class="ma0 w-75"
-*/>}}
-```
+- grep texto archivo — busca texto dentro de un archivo
+- find . -name nombre — busca un archivo por nombre
 
-The rendered output looks like this:
+## 5 Consejos
 
-{{< figure
-    src="/images/zion-national-park.jpg"
-    alt="A photograph of Zion National Park"
-    link="https://www.nps.gov/zion/index.htm"
-    caption="Zion National Park"
-    class="ma0 w-75"
->}}
-
-The HTML looks like this:
-
-```html
-<figure class="ma0 w-75">
-    <a href="https://www.nps.gov/zion/index.htm">
-        <img src="/images/zion-national-park.jpg" alt="A photograph of Zion National Park">
-    </a>
-    <figcaption>
-        <p>Zion National Park</p>
-    </figcaption>
-</figure>
-```
-
-## 2 gist
-
-[Documentation of `gist`](https://gohugo.io/shortcodes/gist/)
-
-Example `gist` input:
-
-```markdown
-{{</* gist spf13 7896402 */>}}
-```
-
-The rendered output looks like this:
-
-{{< gist spf13 7896402 >}}
-
-The HTML looks like this:
-
-```html
-<script type="application/javascript" src="https://gist.github.com/spf13/7896402.js"></script>
-```
-
-## 3 highlight
-
-[Documentation of `highlight`](https://gohugo.io/shortcodes/highlight/)
-
-Example `highlight` input:
-
-```markdown
-{{</* highlight go */>}}
-package main
-
-import "fmt"
-
-func main() {
-    fmt.Println("Hello, 世界")
-}
-{{</* /highlight */>}}
-```
-
-The rendered output looks like this:
-
-{{< highlight go >}}
-package main
-
-import "fmt"
-
-func main() {
-    fmt.Println("Hello, 世界")
-}
-{{< /highlight >}}
-
-## 4 instagram
-
-[Documentation of `instagram`](https://gohugo.io/shortcodes/instagram/)
-
-Example `instagram` input:
-
-```markdown
-{{</* instagram CxOWiQNP2MO */>}}
-```
-
-The rendered output looks like this:
-
-{{< instagram CxOWiQNP2MO >}}
-
-## 5 param
-
-[Documentation of `param`](https://gohugo.io/shortcodes/param/)
-
-Example `param` input:
-
-```markdown
-{{</* param description */>}}
-```
-
-The rendered output looks like this:
-
-{{< param description >}}
-
-## 6 x
-
-[Documentation of `x`](https://gohugo.io/shortcodes/x/)
-
-Example `x` input:
-
-```markdown
-{{</* x user=GoHugoIO id=917359331535966209 */>}}
-```
-
-The rendered output looks like this:
-
-{{< x user=GoHugoIO id=917359331535966209 >}}
-
-## 7 vimeo
-
-[Documentation of `vimeo`](https://gohugo.io/shortcodes/vimeo/)
-
-Example `vimeo` input:
-
-```markdown
-{{</* vimeo 146022717 */>}}
-```
-
-The rendered output looks like this:
-
-{{< vimeo 146022717 >}}
-
-## 8 youtube
-
-[Documentation of `youtube`](https://gohugo.io/shortcodes/youtube/)
-
-Example `youtube` input:
-
-```markdown
-{{</* youtube w7Ft2ymGmfc */>}}
-```
-
-The rendered output looks like this:
-
-{{< youtube w7Ft2ymGmfc >}}
-
-## 9 ref
-
-[Documentation of `ref`](https://gohugo.io/shortcodes/ref/)
-
-## 10  relref
-
-[Documentation of `relref`](https://gohugo.io/shortcodes/relref/)
+- Practica estos comandos todos los dias
+- Usa Tab para autocompletar nombres
+- No tengas miedo de equivocarte, asi se aprende
