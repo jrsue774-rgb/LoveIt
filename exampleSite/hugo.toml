@@ -18,7 +18,7 @@ enableEmoji = true
   dateFormat = "2006-01-02"
   title = "jrsue774-rgb"
   description = "Bienvenido a mi blog de LINUX"
-  images = ["/images/avatar.png"]
+  images = ["/images/avatar.jpeg"]
 
   [params.author]
     name = "jrsue774-rgb"
@@ -48,7 +48,7 @@ enableEmoji = true
     [params.home.profile]
       enable = true
       gravatarEmail = ""
-      avatarURL = "/images/avatar.png"
+      avatarURL = "/images/avatar.jpeg"
       title = ""
       subtitle = "Bienvenido a mi blog de LINUX"
       typeit = true
